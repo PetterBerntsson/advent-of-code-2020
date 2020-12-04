@@ -17,20 +17,18 @@ with open ("data/day1.txt", "r") as f:
             smallest = entries[i]
         i += 1
 
-    print("Part 1: " + "\t" + str(smallest*biggest))
+    print("Part 1:\t" + str(smallest*biggest))
 
     add_set = dict()
     for i, e in enumerate(entries):
         for j in range(len(entries) - i):
             add_set[e + entries[j]] = (e, entries[j])
 
-    a1 = 0
-    a2 = 0
-    a3 = 0
+    a1, a2, a3 = [0]*3
     for e in entries:
         if (2020-e) in add_set:
             a1 = e
             a2, a3 = add_set[2020-e]
             break
 
-    print("Part 2: " + "\t" + str(a1*a2*a3))
+    print("Part 2:\t" + str(a1*a2*a3))
