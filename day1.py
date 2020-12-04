@@ -33,4 +33,4 @@ with open ("data/day1.txt", "r") as f:
             a2, a3 = add_set[2020-e]
             break
 
-    print(a1*a2*a3)
+    print("Part 2: " + "\t" + str(a1*a2*a3))
